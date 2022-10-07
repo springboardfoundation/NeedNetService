@@ -1,7 +1,5 @@
 package org.springboardfoundation.usersservice.dto;
 
-import javax.persistence.Column;
-
 public class UserDto {
 
     private int userNumber;
