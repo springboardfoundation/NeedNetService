@@ -1,17 +1,22 @@
 package org.springboardfoundation.usersservice;
 import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
+@Configuration
+@EntityScan
+@ComponentScan
+@EnableJpaRepositories
 @SpringBootApplication
-@EnableJpaRepositories(basePackages = "org.springbroadfoundation.usersservice.repositories")
-@EntityScan(basePackages = "org.springbroadfoundation.usersservice.entity")
-@ComponentScan(basePackages = "org.springbroadfoundation.usersservice.service")
+@EnableAutoConfiguration
 public class UsersServiceApplication {
 
 	public static void main(String[] args) {
+		// SpringApplication.run(UsersServiceApplication.class, "--debug")
 		SpringApplication.run(UsersServiceApplication.class, args);
 	}
 
