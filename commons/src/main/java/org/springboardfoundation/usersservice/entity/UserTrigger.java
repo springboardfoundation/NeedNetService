@@ -16,7 +16,7 @@ public class UserTrigger {
 	private Long id;
 
 	@OneToOne(cascade = CascadeType.ALL)
-	@JoinColumn(name = "userNumber", referencedColumnName = "id")
+	@JoinColumn(name = "user_identifier", referencedColumnName = "id")
 	private User user;
 
 	private String responseId;

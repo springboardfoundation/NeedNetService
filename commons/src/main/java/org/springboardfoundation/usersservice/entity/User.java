@@ -16,8 +16,8 @@ public class User {
     @GeneratedValue
     @Column(name = "id")
     private Long id;
-    @Column(name="user_number")
-    private int userNumber;
+    @Column(name="user_indentifier")
+    private String userIdentifier;
     private String name;
     private String email;
     private String place;
