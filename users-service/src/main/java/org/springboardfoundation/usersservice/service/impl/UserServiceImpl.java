@@ -20,8 +20,8 @@ public class UserServiceImpl implements UserService {
 		// copy all data into new user object pass that to save
 		User user = UserMapper.MAPPER.map(userDto);
 
-        String x=Utility.utilitymethod();
-		user.setUserIdentifier((x.replace("-","")));
+        String x=Utility.generateUUID();
+		user.setUserIdentifier(x);
 
 		userRepositoy.save(user);
 		// before return copy all data into userdto and return
