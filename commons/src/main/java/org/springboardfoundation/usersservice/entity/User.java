@@ -6,7 +6,6 @@ import javax.persistence.*;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
 @Data
 @NoArgsConstructor
 @Entity
@@ -23,9 +22,10 @@ public class User {
     private String place;
     private int age;
     private String gender;
-    private String occupation;
 
-    private int mobileNumber;
+    private String occupation;
+    @Column(name="mobile_number")
+    private String mobileNumber;
 
     @OneToOne(mappedBy = "user")
     private UserTrigger trigger;
