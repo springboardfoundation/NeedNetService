@@ -6,6 +6,8 @@ import javax.persistence.*;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.springboardfoundation.usersservice.gender.Gender;
+
 @Data
 @NoArgsConstructor
 @Entity
@@ -21,7 +23,8 @@ public class User {
     private String email;
     private String place;
     private int age;
-    private String gender;
+    @Enumerated(EnumType.STRING)
+    private Gender gender;
 
     private String occupation;
     @Column(name="mobile_number")

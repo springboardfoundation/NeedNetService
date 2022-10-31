@@ -1,6 +1,8 @@
 package org.springboardfoundation.usersservice.dto;
 
 import lombok.Data;
+import org.springboardfoundation.usersservice.gender.Gender;
+
 @Data
 public class UserDto {
     private int userNumber;
@@ -8,7 +10,7 @@ public class UserDto {
     private String email;
     private String place;
     private int age;
-    private String gender;
+    private Gender gender;
     private String occupation;
     private String mobileNumber;
 }
