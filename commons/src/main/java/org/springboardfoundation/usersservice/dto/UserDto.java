@@ -1,8 +1,7 @@
 package org.springboardfoundation.usersservice.dto;
 
 import lombok.Data;
-import org.springboardfoundation.usersservice.gender.Gender;
-
+import org.springboardfoundation.usersservice.entity.Gender;
 @Data
 public class UserDto {
     private int userNumber;

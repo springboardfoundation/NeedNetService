@@ -6,8 +6,6 @@ import javax.persistence.*;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.springboardfoundation.usersservice.gender.Gender;
-
 @Data
 @NoArgsConstructor
 @Entity
