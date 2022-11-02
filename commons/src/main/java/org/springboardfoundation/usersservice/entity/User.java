@@ -21,7 +21,8 @@ public class User {
     private String email;
     private String place;
     private int age;
-    private String gender;
+    @Enumerated(EnumType.STRING)
+    private Gender gender;
 
     private String occupation;
     @Column(name="mobile_number")
