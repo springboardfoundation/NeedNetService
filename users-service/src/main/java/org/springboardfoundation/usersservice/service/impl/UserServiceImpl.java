@@ -1,5 +1,4 @@
 package org.springboardfoundation.usersservice.service.impl;
-import org.springboardfoundation.usersservice.controller.UserRegistrationController;
 import org.springboardfoundation.usersservice.dto.UserDto;
 import org.springboardfoundation.usersservice.entity.User;
 import org.springboardfoundation.usersservice.mapper.UserMapper;
@@ -8,6 +7,7 @@ import org.springboardfoundation.usersservice.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springboardfoundation.usersservice.utiliy.Utility;
+
 @Service
 public class UserServiceImpl implements UserService {
 	@Autowired
@@ -21,6 +21,12 @@ public class UserServiceImpl implements UserService {
 		user.setUserIdentifier(x);
 		userRepositoy.save(user);
 		// before return copy all data into userdto and return
+		return UserMapper.MAPPER.map(user);
+	}
+
+	@Override
+	public UserDto checkUserIdentifier(String userIdentifier) {
+		User user=userRepositoy.findByUserIdentifier(userIdentifier);
 		return UserMapper.MAPPER.map(user);
 	}
 }
