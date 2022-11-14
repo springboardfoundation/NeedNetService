@@ -4,6 +4,7 @@ package org.springboardfoundation.usersservice.controller;
 import org.springboardfoundation.usersservice.dto.UserDto;
 import org.springboardfoundation.usersservice.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -11,10 +12,19 @@ import org.springframework.web.bind.annotation.*;
 public class UserRegistrationController {
     @Autowired
     private UserService userService;
+
     @PostMapping("/register/{mobileNumber}")
-    public UserDto saveinfo(@RequestBody UserDto userDto,@PathVariable("mobileNumber") String mobileNumber) {
+    public UserDto saveinfo(@RequestBody UserDto userDto, @PathVariable("mobileNumber") String mobileNumber) {
         //userDto.setMobileNumber(Integer.parseInt(mobileNumber));
 
-        return userService.saveUser(userDto,mobileNumber);
+        return userService.saveUser(userDto, mobileNumber);
+    }
+    @GetMapping
+    public ResponseEntity<UserDto> getUser(@RequestParam(name="userIdentifier")String userIdentifier) {
+        try {
+            return ResponseEntity.ok().body(userService.checkUserIdentifier(userIdentifier));
+        } catch (Exception e) {
+            return ResponseEntity.noContent().build();
+        }
     }
 }
