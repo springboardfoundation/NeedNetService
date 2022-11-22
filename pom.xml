@@ -23,7 +23,8 @@
 		<module>users-service</module>
 		<module>needs-service</module>
 		<module>commons</module>
-	</modules>
+        <module>db-lib</module>
+    </modules>
 
 	<properties>
 		<!-- Enable Java 11 -->

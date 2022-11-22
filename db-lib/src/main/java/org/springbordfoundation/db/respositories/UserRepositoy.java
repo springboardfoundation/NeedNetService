@@ -1,7 +1,7 @@
-package org.springboardfoundation.usersservice.repositories;
+package org.springbordfoundation.db.respositories;
 
-import org.springboardfoundation.usersservice.entity.User;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springboardfoundation.usersservice.entity.User;
 import org.springframework.stereotype.Repository;
 
 @Repository
