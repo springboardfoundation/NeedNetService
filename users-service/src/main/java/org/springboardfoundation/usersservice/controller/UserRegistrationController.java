@@ -20,11 +20,14 @@ public class UserRegistrationController {
         return userService.saveUser(userDto, mobileNumber);
     }
     @GetMapping
-    public ResponseEntity<UserDto> getUser(@RequestParam(name="userIdentifier")String userIdentifier) {
+    public ResponseEntity<UserDto> getUser(@RequestParam(name="searchKey")String searchKey,
+                                           @RequestParam(name="searchParam")String userIdentifier) {
         try {
-            return ResponseEntity.ok().body(userService.checkUserIdentifier(userIdentifier));
+            if(searchKey.equalsIgnoreCase("userIdentifier"))
+                return ResponseEntity.ok().body(userService.checkUserIdentifier(userIdentifier));
         } catch (Exception e) {
             return ResponseEntity.noContent().build();
         }
+        return ResponseEntity.noContent().build();
     }
 }
