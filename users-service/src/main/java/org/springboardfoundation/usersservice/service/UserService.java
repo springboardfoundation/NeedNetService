@@ -8,5 +8,7 @@ public interface UserService {
 
     UserDto checkUserIdentifier(String userIdentifier);
 
+    UserDto updateUserInfo(UserDto userDto,String userIdentifier);
+
 
 }

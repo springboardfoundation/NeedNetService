@@ -30,4 +30,9 @@ public class UserRegistrationController {
         }
         return ResponseEntity.noContent().build();
     }
+
+    @PutMapping("/register/{userIdentifier}")
+    public UserDto updateInfo(@RequestBody UserDto userDto,@PathVariable("userIdentifier") String userIdentifier){
+        return userService.updateUserInfo(userDto,userIdentifier);
+    }
 }
