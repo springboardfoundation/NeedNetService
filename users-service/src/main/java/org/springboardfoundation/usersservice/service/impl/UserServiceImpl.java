@@ -29,4 +29,14 @@ public class UserServiceImpl implements UserService {
 		User user=userDbService.findByUserIdentifier(userIdentifier);
 		return UserMapper.MAPPER.map(user);
 	}
+
+	@Override
+	public UserDto updateUserInfo(UserDto userDto,String userIdentifier) {
+
+		User user = userDbService.findByUserIdentifier(userIdentifier);
+		user.setName(userDto.getName());
+		user.setMobileNumber(userDto.getMobileNumber());
+		userDbService.update(user);
+		return UserMapper.MAPPER.map(user);
+	}
 }
