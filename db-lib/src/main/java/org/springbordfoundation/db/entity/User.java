@@ -1,11 +1,10 @@
-package org.springboardfoundation.usersservice.entity;
+package org.springbordfoundation.db.entity;
 
-
-
-import javax.persistence.*;
-
+import jakarta.persistence.*;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.springboardfoundation.common.entity.Gender;
+
 @Data
 @NoArgsConstructor
 @Entity

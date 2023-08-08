@@ -1,21 +1,17 @@
 package org.springboardfoundation.usersservice;
+
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
-import org.springframework.context.annotation.ComponentScan;
-import org.springframework.context.annotation.ComponentScans;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
+import org.springframework.transaction.annotation.EnableTransactionManagement;
+
 
 @Configuration
 @EntityScan
-@EnableJpaRepositories
+@EnableTransactionManagement
 @EnableAutoConfiguration
-//@ComponentScans(value = {@ComponentScan("org.springboardfoundation.usersservice"),@ComponentScan("org.springboardfoundation.db")})
-@ComponentScan({
-		"org.springboardfoundation.usersservice.*","org.springboardfoundation.db.*"
-})
 @SpringBootApplication
 public class UsersServiceApplication {
 

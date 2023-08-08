@@ -3,7 +3,7 @@ package org.springbordfoundation.db.service.impl;
 import org.springbordfoundation.db.respositories.UserRepositoy;
 import org.springbordfoundation.db.service.UserDbService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springboardfoundation.usersservice.entity.User;
+import org.springbordfoundation.db.entity.User;
 
 import org.springframework.stereotype.Service;
 
@@ -15,6 +15,11 @@ public class UserDbServiceImpl implements UserDbService {
 
     @Override
     public void save(User user) {
+        userRepositoy.save(user);
+    }
+
+    @Override
+    public void update(User user) {
         userRepositoy.save(user);
     }
 
