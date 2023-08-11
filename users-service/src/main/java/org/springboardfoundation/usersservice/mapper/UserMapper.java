@@ -3,8 +3,8 @@ package org.springboardfoundation.usersservice.mapper;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.factory.Mappers;
-import org.springboardfoundation.usersservice.dto.UserDto;
-import org.springboardfoundation.usersservice.entity.User;
+import org.springboardfoundation.common.dto.UserDto;
+import org.springbordfoundation.db.entity.User;
 @Mapper
 public interface UserMapper {
 	UserMapper MAPPER = Mappers.getMapper(UserMapper.class);

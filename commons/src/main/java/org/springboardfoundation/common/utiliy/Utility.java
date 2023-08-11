@@ -1,4 +1,4 @@
-package org.springboardfoundation.usersservice.utiliy;
+package org.springboardfoundation.common.utiliy;
 
 import java.util.UUID;
 
