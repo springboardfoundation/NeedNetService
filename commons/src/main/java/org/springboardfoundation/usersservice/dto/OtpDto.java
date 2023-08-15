@@ -6,4 +6,5 @@ import lombok.Data;
 public class OtpDto {
     private String mobileNumber;
     private boolean status;
+    private String otp;
 }

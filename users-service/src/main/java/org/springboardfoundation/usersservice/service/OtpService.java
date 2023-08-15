@@ -5,4 +5,6 @@ import org.springboardfoundation.usersservice.dto.OtpDto;
 
 public interface OtpService {
     OtpDto saveOtp(OtpDto otpdto);
+
+    OtpDto validateOtp(OtpDto otpdto);
 }

@@ -7,4 +7,5 @@ public interface OtpDbService {
 
     Otp save(Otp otp);
 
+    Otp findByMobileNumber(String mobileNumber);
 }

@@ -33,5 +33,21 @@ public class OtpServiceImp implements OtpService {
         return otpDto;
     }
 
+    @Override
+    public OtpDto validateOtp(OtpDto otpDto ) {
+
+//        Otp otp = OtpMapper.MAPPER.map(otpDto, otpDto.getMobileNumber());
+
+        // Validate with the service using the unique key
+        Otp otp = otpDbService.findByMobileNumber(otpDto.getMobileNumber());
+   
+        otpDto.setStatus(otp != null);
+
+        System.out.println("Fetched  OTP **" + otp);
+        // before return copy all data into userdto and return
+        return otpDto;
+    }
+
+
 }
 

@@ -15,4 +15,9 @@ public class OtpDbSericeImpl implements OtpDbService {
     public Otp save(Otp otp) {
         return otpRepository.save(otp);
     }
+
+    @Override
+    public Otp findByMobileNumber(String mobileNumber) {
+        return otpRepository.findByMobileNumber(mobileNumber);
+    }
 }

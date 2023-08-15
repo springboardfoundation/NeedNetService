@@ -21,4 +21,13 @@ public class OTPController {
 
         return otpService.saveOtp(otpDto);
     }
+
+    @PostMapping("/validate/{mobileNumber}/{otp}")
+    public OtpDto generateOtp(@PathVariable("mobileNumber") String mobileNumber, @PathVariable("otp") String otp) {
+        OtpDto otpDto = new OtpDto();
+        otpDto.setMobileNumber(mobileNumber);
+        System.out.println("otpDto **" + otpDto);
+
+        return otpService.validateOtp(otpDto);
+    }
 }
