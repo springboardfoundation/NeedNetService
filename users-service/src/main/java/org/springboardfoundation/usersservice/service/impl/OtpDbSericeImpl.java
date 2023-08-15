@@ -1,8 +1,7 @@
 package org.springboardfoundation.usersservice.service.impl;
 
-import org.springboardfoundation.usersservice.entity.Otp;
-import org.springboardfoundation.usersservice.repositories.OtpRepository;
-import org.springboardfoundation.usersservice.repositories.UserRepositoy;
+import org.springbordfoundation.db.entity.Otp;
+import org.springbordfoundation.db.respositories.OtpRepository;
 import org.springboardfoundation.usersservice.service.OtpDbService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

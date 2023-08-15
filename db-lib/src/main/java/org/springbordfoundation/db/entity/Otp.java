@@ -1,9 +1,10 @@
-package org.springboardfoundation.usersservice.entity;
+package org.springbordfoundation.db.entity;
 
+import jakarta.persistence.*;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.*;
+
 
 @Data
 @NoArgsConstructor

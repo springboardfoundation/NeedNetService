@@ -1,7 +1,6 @@
 package org.springboardfoundation.usersservice.controller;
 
 import org.springboardfoundation.usersservice.dto.OtpDto;
-import org.springboardfoundation.usersservice.dto.UserDto;
 import org.springboardfoundation.usersservice.service.OtpService;
 import org.springboardfoundation.usersservice.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;

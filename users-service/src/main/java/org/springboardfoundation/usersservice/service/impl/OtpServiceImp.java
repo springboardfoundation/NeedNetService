@@ -1,13 +1,11 @@
 package org.springboardfoundation.usersservice.service.impl;
 
+import org.springboardfoundation.common.utiliy.Utility;
 import org.springboardfoundation.usersservice.dto.OtpDto;
-import org.springboardfoundation.usersservice.entity.Otp;
+import org.springbordfoundation.db.entity.Otp;
 import org.springboardfoundation.usersservice.mapper.OtpMapper;
-import org.springboardfoundation.usersservice.mapper.UserMapper;
 import org.springboardfoundation.usersservice.service.OtpDbService;
 import org.springboardfoundation.usersservice.service.OtpService;
-import org.springboardfoundation.usersservice.service.UserDbService;
-import org.springboardfoundation.usersservice.utiliy.Utility;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

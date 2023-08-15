@@ -4,7 +4,7 @@ import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.factory.Mappers;
 import org.springboardfoundation.usersservice.dto.OtpDto;
-import org.springboardfoundation.usersservice.entity.Otp;
+import org.springbordfoundation.db.entity.Otp;
 
 
 @Mapper

@@ -1,7 +1,7 @@
 package org.springboardfoundation.usersservice.service;
 
-import org.springboardfoundation.usersservice.entity.Otp;
-import org.springboardfoundation.usersservice.entity.User;
+import org.springbordfoundation.db.entity.Otp;
+
 
 public interface OtpDbService {
 
