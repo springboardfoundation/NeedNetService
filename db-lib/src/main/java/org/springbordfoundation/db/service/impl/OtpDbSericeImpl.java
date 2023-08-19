@@ -1,10 +1,12 @@
-package org.springboardfoundation.usersservice.service.impl;
+package org.springbordfoundation.db.service.impl;
 
 import org.springbordfoundation.db.entity.Otp;
 import org.springbordfoundation.db.respositories.OtpRepository;
-import org.springboardfoundation.usersservice.service.OtpDbService;
+import org.springbordfoundation.db.service.OtpDbService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 @Service
 public class OtpDbSericeImpl implements OtpDbService {
@@ -17,7 +19,7 @@ public class OtpDbSericeImpl implements OtpDbService {
     }
 
     @Override
-    public Otp findByMobileNumber(String mobileNumber) {
-        return otpRepository.findByMobileNumber(mobileNumber);
+    public List<Otp> findAllByMobileNumber(String mobileNumber) {
+        return otpRepository.findAllByMobileNumber(mobileNumber);
     }
 }
