@@ -1,5 +1,7 @@
 package org.springboardfoundation.usersservice.controller;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springboardfoundation.usersservice.dto.OtpDto;
 import org.springboardfoundation.usersservice.service.OtpService;
 import org.springboardfoundation.usersservice.service.UserService;
@@ -12,13 +14,12 @@ public class OTPController {
 
     @Autowired
     private OtpService otpService;
-
+    Logger logger = LoggerFactory.getLogger(LoggingController.class);
     @PostMapping("/getOtp/{mobileNumber}")
     public OtpDto generateOtp(@PathVariable("mobileNumber") String mobileNumber) {
         OtpDto otpDto = new OtpDto();
         otpDto.setMobileNumber(mobileNumber);
-        System.out.println("otpDto **" + otpDto);
-
+        logger.info("otpDto **" + otpDto);
         return otpService.saveOtp(otpDto);
     }
 
@@ -26,7 +27,7 @@ public class OTPController {
     public OtpDto generateOtp(@PathVariable("mobileNumber") String mobileNumber, @PathVariable("otp") String otp) {
         OtpDto otpDto = new OtpDto();
         otpDto.setMobileNumber(mobileNumber);
-        System.out.println("otpDto **" + otpDto);
+        logger.info("otpDto **" + otpDto);
 
         return otpService.validateOtp(otpDto);
     }

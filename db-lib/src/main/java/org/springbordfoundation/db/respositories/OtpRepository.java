@@ -8,7 +8,5 @@ import org.springframework.stereotype.Repository;
 @Component
 @Repository
 public interface OtpRepository extends JpaRepository<Otp,Long> {
-    //Generate OTP
-    //Otp save(Otp otp);
     Otp findByMobileNumber(String mobileNumber);
 }
