@@ -18,6 +18,7 @@
         <module>needs-service</module>
         <module>commons</module>
         <module>db-lib</module>
+        <module>neednet-security</module>
     </modules>
 
     <properties>
@@ -86,6 +87,18 @@
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
+    <dependencies>
+        <dependency>
+            <groupId>net.skobow</groupId>
+            <artifactId>apikey-authentication-spring-boot-starter</artifactId>
+            <version>0.6.1</version>
+        </dependency>
+        <dependency>
+            <groupId>net.skobow</groupId>
+            <artifactId>apikey-authentication-spring-boot-starter</artifactId>
+            <version>0.6.1</version>
+        </dependency>
+    </dependencies>
 
     <build>
         <plugins>

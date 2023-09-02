@@ -7,6 +7,8 @@ import org.springbordfoundation.db.entity.User;
 
 import org.springframework.stereotype.Service;
 
+import java.util.Optional;
+
 @Service
 public class UserDbServiceImpl implements UserDbService {
 
@@ -24,7 +26,7 @@ public class UserDbServiceImpl implements UserDbService {
     }
 
     @Override
-    public User findByUserIdentifier(String userIdentifier) {
+    public Optional<User> findByUserIdentifier(String userIdentifier) {
         return userRepositoy.findByUserIdentifier(userIdentifier);
     }
 }

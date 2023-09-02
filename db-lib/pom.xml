@@ -51,6 +51,20 @@
             <version>${lombock.version}</version>
             <scope>provided</scope>
         </dependency>
+        <dependency>
+            <groupId>net.skobow</groupId>
+            <artifactId>apikey-authentication-spring-boot-starter</artifactId>
+            <version>0.6.1</version>
+        </dependency>
+        <dependency>
+            <groupId>net.skobow</groupId>
+            <artifactId>apikey-authentication-spring-boot-starter</artifactId>
+            <version>0.6.1</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-core</artifactId>
+        </dependency>
     </dependencies>
 
 </project>
