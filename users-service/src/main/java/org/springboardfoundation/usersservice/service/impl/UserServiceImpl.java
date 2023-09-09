@@ -9,6 +9,8 @@ import org.springbordfoundation.db.service.UserDbService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Optional;
+
 @Service
 public class UserServiceImpl implements UserService {
     @Autowired
@@ -28,17 +30,22 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public UserDto checkUserIdentifier(String userIdentifier) {
-        User user = userDbService.findByUserIdentifier(userIdentifier);
-        return UserMapper.MAPPER.map(user);
+        Optional<User> user = userDbService.findByUserIdentifier(userIdentifier);
+        return user.map(UserMapper.MAPPER::map).orElse(null);
     }
 
     @Override
     public UserDto updateUserInfo(UserDto userDto, String userIdentifier) {
 
-        User user = userDbService.findByUserIdentifier(userIdentifier);
-        user.setName(userDto.getName());
-        user.setMobileNumber(userDto.getMobileNumber());
-        userDbService.update(user);
-        return UserMapper.MAPPER.map(user);
+        Optional<User> userOptional = userDbService.findByUserIdentifier(userIdentifier);
+        if(userOptional.isPresent()) {
+            User user = userOptional.get();
+            user.setName(userDto.getName());
+            user.setMobileNumber(userDto.getMobileNumber());
+            userDbService.update( user);
+            return UserMapper.MAPPER.map(user);
+        }
+
+        return null;
     }
 }

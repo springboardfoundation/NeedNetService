@@ -1,6 +1,8 @@
 package org.springbordfoundation.db.entity;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springboardfoundation.common.entity.Gender;
@@ -13,6 +15,7 @@ import java.util.List;
 
 @Data
 @NoArgsConstructor
+@AllArgsConstructor
 @Entity
 @Table(name="user")
 public class User implements UserDetails {

@@ -3,7 +3,7 @@ package org.springboardfoundation.usersservice.configuration;
 import lombok.RequiredArgsConstructor;
 import org.springboardfoundation.common.dto.AuthenticationRequest;
 import org.springboardfoundation.common.dto.AuthenticationResponse;
-import org.springbordfoundation.db.respositories.UserRepositoy;
+import org.springbordfoundation.db.respositories.UserRepository;
 import org.springbordfoundation.db.service.UserDbService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -16,12 +16,11 @@ public class AuthenticationService {
 
     private final AuthenticationManager authenticationManager;
 
-    @Autowired
     private UserDbService userDbService;
 
     private JwtTokenUtil jwtService;
 
-    private final UserRepositoy repository;
+    private final UserRepository repository;
     public AuthenticationResponse authenticate(AuthenticationRequest request) {
         authenticationManager.authenticate(
                 new UsernamePasswordAuthenticationToken(

@@ -16,7 +16,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 public class UsersServiceApplication {
 
 	public static void main(String[] args) {
-		// SpringApplication.run(UsersServiceApplication.class, "--debug")
+		 //SpringApplication.run(UsersServiceApplication.class, "--debug");
 		SpringApplication.run(UsersServiceApplication.class, args);
 	}
 }
