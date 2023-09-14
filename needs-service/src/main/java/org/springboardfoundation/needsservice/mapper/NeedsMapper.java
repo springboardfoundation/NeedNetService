@@ -1,4 +1,4 @@
-package org.springboardfoundation.usersservice.mapper;
+package org.springboardfoundation.needsservice.mapper;
 
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
@@ -7,8 +7,8 @@ import org.springboardfoundation.common.dto.users.UserDto;
 import org.springbordfoundation.db.entity.User;
 
 @Mapper
-public interface UserMapper {
-	UserMapper MAPPER = Mappers.getMapper(UserMapper.class);
+public interface NeedsMapper {
+	NeedsMapper MAPPER = Mappers.getMapper(NeedsMapper.class);
 
 	UserDto map(User user);
 

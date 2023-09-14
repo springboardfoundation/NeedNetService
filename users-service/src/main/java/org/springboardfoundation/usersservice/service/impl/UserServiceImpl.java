@@ -1,9 +1,9 @@
 package org.springboardfoundation.usersservice.service.impl;
 
-import org.springboardfoundation.common.dto.UserDto;
+import org.springboardfoundation.common.dto.users.UserDto;
+import org.springboardfoundation.common.utiliy.Utility;
 import org.springboardfoundation.usersservice.mapper.UserMapper;
 import org.springboardfoundation.usersservice.service.UserService;
-import org.springboardfoundation.common.utiliy.Utility;
 import org.springbordfoundation.db.entity.User;
 import org.springbordfoundation.db.service.UserDbService;
 import org.springframework.beans.factory.annotation.Autowired;

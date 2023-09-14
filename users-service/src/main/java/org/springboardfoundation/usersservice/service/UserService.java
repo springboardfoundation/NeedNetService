@@ -1,6 +1,6 @@
 package org.springboardfoundation.usersservice.service;
 
-import org.springboardfoundation.common.dto.UserDto;
+import org.springboardfoundation.common.dto.users.UserDto;
 
 public interface UserService {
 
