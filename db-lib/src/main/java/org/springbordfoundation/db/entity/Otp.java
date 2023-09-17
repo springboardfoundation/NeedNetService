@@ -4,12 +4,10 @@ import jakarta.persistence.*;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-
-
 @Data
 @NoArgsConstructor
 @Entity
-@Table(name="otp")
+@Table(name = "otp")
 public class Otp {
 
     @Id
@@ -17,10 +15,9 @@ public class Otp {
     @Column(name = "id")
     private Long id;
 
-
-    @Column( name="mobile_number")
+    @Column(name = "mobile_number")
     private String mobileNumber;
 
-    @Column(unique=true, name="uniqueId")
+    @Column(unique = true, name = "uniqueId")
     private String uniqueId;
 }

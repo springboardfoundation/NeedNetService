@@ -18,6 +18,7 @@
         <module>needs-service</module>
         <module>commons</module>
         <module>db-lib</module>
+        <module>file-service</module>
     </modules>
 
     <properties>
@@ -62,8 +63,6 @@
         <io-rest-assured.version>4.3.1</io-rest-assured.version>
         <wiremock.version>2.27.2</wiremock.version>
         <awaitility.version>4.0.3</awaitility.version>
-        <badwidth.sdk.version>5.0.0</badwidth.sdk.version>
-        <badwidth.iris.sdk.version>2.0.0</badwidth.iris.sdk.version>
         <jasypt.version>3.0.3</jasypt.version>
 
         <jnats.version>2.11.5</jnats.version>
@@ -92,6 +91,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.11.0</version>
                 <configuration>
                     <source>${java.version}</source>
                     <target>${java.version}</target>
@@ -117,10 +117,12 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-failsafe-plugin</artifactId>
+                <version>3.1.2</version>
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-deploy-plugin</artifactId>
+                <version>3.1.1</version>
             </plugin>
         </plugins>
     </build>

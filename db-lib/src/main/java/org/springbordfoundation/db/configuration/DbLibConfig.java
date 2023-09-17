@@ -6,8 +6,8 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 @Configuration
-@EnableJpaRepositories(basePackages = {"org.springbordfoundation.db"})
-@EntityScan(basePackages = {"org.springbordfoundation.db"})
-@ComponentScan(basePackages = {"org.springbordfoundation.db"})
+@EnableJpaRepositories(basePackages = {"org.springbordfoundation.db.respositories"})
+@EntityScan(basePackages = {"org.springbordfoundation.db.entity.*"})
+@ComponentScan(basePackages = {"org.springbordfoundation.db.*"})
 public class DbLibConfig {
 }

@@ -3,8 +3,6 @@ package org.springboardfoundation.usersservice.service.impl;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springboardfoundation.common.utiliy.Utility;
-import org.springboardfoundation.usersservice.controller.LoggingController;
-import org.springboardfoundation.usersservice.controller.OTPController;
 import org.springboardfoundation.usersservice.dto.OtpDto;
 import org.springbordfoundation.db.entity.Otp;
 import org.springboardfoundation.usersservice.mapper.OtpMapper;
@@ -60,4 +58,3 @@ public class OtpServiceImp implements OtpService {
 
 
 }
-

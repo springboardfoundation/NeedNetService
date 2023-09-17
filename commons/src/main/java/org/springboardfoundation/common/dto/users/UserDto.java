@@ -1,7 +1,9 @@
-package org.springboardfoundation.common.dto;
+package org.springboardfoundation.common.dto.users;
+
+import org.springboardfoundation.common.entity.Gender;
 
 import lombok.Data;
-import org.springboardfoundation.common.entity.Gender;
+
 @Data
 public class UserDto {
     private int userNumber;
