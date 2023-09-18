@@ -26,8 +26,6 @@ public class JwtTokenFilter extends OncePerRequestFilter {
     private final JwtTokenUtil jwtTokenUtil;
     private final UserDetailsService userDetailsService;
     private final UserRepository userRepo;
-    final String userId;
-    String username;
 
     @Override
     protected void doFilterInternal(HttpServletRequest request,
@@ -43,7 +41,7 @@ public class JwtTokenFilter extends OncePerRequestFilter {
 
         // Get jwt token and validate
         final String token = header.split(" ")[1].trim();
-        username = (String) jwtTokenUtil.extractUsername(token);
+        String username = (String) jwtTokenUtil.extractUsername(token);
         if(username != null && SecurityContextHolder.getContext().getAuthentication() == null) {
 
 

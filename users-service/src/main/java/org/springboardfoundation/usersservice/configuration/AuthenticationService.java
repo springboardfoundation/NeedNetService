@@ -14,13 +14,11 @@ import org.springframework.stereotype.Service;
 @RequiredArgsConstructor
 public class AuthenticationService {
 
+    private final UserDbService userDbService;
+    private final JwtTokenUtil jwtService;
+    private final UserRepository repository;
     private final AuthenticationManager authenticationManager;
 
-    private UserDbService userDbService;
-
-    private JwtTokenUtil jwtService;
-
-    private final UserRepository repository;
     public AuthenticationResponse authenticate(AuthenticationRequest request) {
         authenticationManager.authenticate(
                 new UsernamePasswordAuthenticationToken(
