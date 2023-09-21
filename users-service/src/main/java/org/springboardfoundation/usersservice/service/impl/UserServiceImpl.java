@@ -5,14 +5,12 @@ import org.springboardfoundation.common.utiliy.Utility;
 import org.springboardfoundation.usersservice.mapper.UserMapper;
 import org.springboardfoundation.usersservice.service.UserService;
 import org.springbordfoundation.db.entity.User;
-import org.springbordfoundation.db.service.UserDbService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
 public class UserServiceImpl implements UserService {
-    @Autowired
-    private UserDbService userDbService;
+    // @Autowired
+    // private UserDbService userDbService;
 
     @Override
     public UserDto saveUser(UserDto userDto, String mobileNumber) {
@@ -21,24 +19,25 @@ public class UserServiceImpl implements UserService {
         //User user = UserMapper.MAPPER.map(mobileNumber);
         String x = Utility.generateUUID();
         user.setUserIdentifier(x);
-        userDbService.save(user);
+        // userDbService.save(user);
         // before return copy all data into userdto and return
         return UserMapper.MAPPER.map(user);
     }
 
     @Override
     public UserDto checkUserIdentifier(String userIdentifier) {
-        User user = userDbService.findByUserIdentifier(userIdentifier);
+        // User user = userDbService.findByUserIdentifier(userIdentifier);
+        User user = new User();
         return UserMapper.MAPPER.map(user);
     }
 
     @Override
     public UserDto updateUserInfo(UserDto userDto, String userIdentifier) {
-
-        User user = userDbService.findByUserIdentifier(userIdentifier);
+        User user = new User();
+        // User user = userDbService.findByUserIdentifier(userIdentifier);
         user.setName(userDto.getName());
         user.setMobileNumber(userDto.getMobileNumber());
-        userDbService.update(user);
+        // userDbService.update(user);
         return UserMapper.MAPPER.map(user);
     }
 }
