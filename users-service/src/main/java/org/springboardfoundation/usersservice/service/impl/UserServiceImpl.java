@@ -1,17 +1,21 @@
 package org.springboardfoundation.usersservice.service.impl;
 
+import lombok.RequiredArgsConstructor;
 import org.springboardfoundation.common.dto.users.UserDto;
 import org.springboardfoundation.common.utiliy.Utility;
 import org.springboardfoundation.usersservice.mapper.UserMapper;
 import org.springboardfoundation.usersservice.service.UserService;
 import org.springbordfoundation.db.entity.User;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 @Service
+@RequiredArgsConstructor
 public class UserServiceImpl implements UserService {
     // @Autowired
     // private UserDbService userDbService;
 
+    private final PasswordEncoder passwordEncoder;
     @Override
     public UserDto saveUser(UserDto userDto, String mobileNumber) {
         // copy all data into new user object pass that to save
@@ -19,6 +23,7 @@ public class UserServiceImpl implements UserService {
         //User user = UserMapper.MAPPER.map(mobileNumber);
         String x = Utility.generateUUID();
         user.setUserIdentifier(x);
+        user.setPassword(passwordEncoder.encode(user.getPassword()));
         // userDbService.save(user);
         // before return copy all data into userdto and return
         return UserMapper.MAPPER.map(user);
