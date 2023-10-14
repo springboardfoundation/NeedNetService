@@ -14,4 +14,5 @@ public class UserDto {
     private Gender gender;
     private String occupation;
     private String mobileNumber;
+    private String password;
 }

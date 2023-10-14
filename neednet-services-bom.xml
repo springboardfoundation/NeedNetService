@@ -9,6 +9,9 @@
 	<version>1.0</version>
 	<packaging>pom</packaging>
 	<description>Bill of materials for neednet services</description>
+    <modules>
+        <module>security-lib</module>
+    </modules>
 
 	<properties>
 		<!-- maven plugins -->
