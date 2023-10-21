@@ -1,4 +1,4 @@
-package org.springboardfoundation.usersservice.dto;
+package org.springboardfoundation.common.dto;
 
 import lombok.Data;
 

@@ -1,6 +1,6 @@
 package org.springboardfoundation.usersservice.service;
 
-import org.springboardfoundation.usersservice.dto.OtpDto;
+import org.springboardfoundation.common.dto.OtpDto;
 
 
 public interface OtpService {
