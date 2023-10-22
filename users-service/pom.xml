@@ -49,6 +49,12 @@
         </dependency>
         <dependency>
             <groupId>org.springboardfoundation</groupId>
+            <artifactId>web-clients-lib</artifactId>
+            <version>${project.version}</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.springboardfoundation</groupId>
             <artifactId>db-lib</artifactId>
             <version>${project.version}</version>
         </dependency>
@@ -123,6 +129,11 @@
             <artifactId>security-lib</artifactId>
             <version>1.0</version>
             <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-loadbalancer</artifactId>
+            <version>4.0.3</version>
         </dependency>
     </dependencies>
 

@@ -1,4 +1,4 @@
-package org.springboardfoundation.dbservice.web.controller;
+package org.springboardfoundation.dbservice.controller;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -8,8 +8,8 @@ import org.springboardfoundation.dbservice.service.OtpDbService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import static org.springboardfoundation.dbservice.web.ApiConstants.MOBILE_NUMBER_PARAM;
-import static org.springboardfoundation.dbservice.web.ApiConstants.OTP_PATH;
+import static org.springboardfoundation.common.web.ApiConstants.MOBILE_NUMBER_PARAM;
+import static org.springboardfoundation.common.web.ApiConstants.OTP_PATH;
 
 @Slf4j
 @RestController
