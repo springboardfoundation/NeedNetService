@@ -18,6 +18,7 @@
         <module>needs-service</module>
         <module>commons</module>
         <module>db-lib</module>
+        <module>db-service</module>
         <module>file-service</module>
         <module>discovery-service</module>
     </modules>
@@ -75,23 +76,18 @@
         <apache.commons-text.version>1.9</apache.commons-text.version>
     </properties>
 
-	<dependencyManagement>
-		<dependencies>
-			<dependency>
-				<groupId>org.springboardfoundation</groupId>
-				<artifactId>neednet-services-bom</artifactId>
-				<version>${project.version}</version>
-				<type>pom</type>
-				<scope>import</scope>
-			</dependency>
-		</dependencies>
-	</dependencyManagement>
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springboardfoundation</groupId>
+                <artifactId>neednet-services-bom</artifactId>
+                <version>${project.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
     <dependencies>
-        <dependency>
-            <groupId>net.skobow</groupId>
-            <artifactId>apikey-authentication-spring-boot-starter</artifactId>
-            <version>0.6.1</version>
-        </dependency>
         <dependency>
             <groupId>net.skobow</groupId>
             <artifactId>apikey-authentication-spring-boot-starter</artifactId>

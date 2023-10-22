@@ -3,7 +3,7 @@ package org.springboardfoundation.usersservice.service.impl;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springboardfoundation.common.utiliy.Utility;
-import org.springboardfoundation.usersservice.dto.OtpDto;
+import org.springboardfoundation.common.dto.OtpDto;
 import org.springboardfoundation.usersservice.mapper.OtpMapper;
 import org.springboardfoundation.usersservice.service.OtpService;
 import org.springbordfoundation.db.entity.Otp;

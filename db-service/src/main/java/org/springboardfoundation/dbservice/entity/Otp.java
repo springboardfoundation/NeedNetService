@@ -1,4 +1,4 @@
-package org.springbordfoundation.db.entity;
+package org.springboardfoundation.dbservice.entity;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;

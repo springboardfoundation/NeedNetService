@@ -3,7 +3,7 @@ package org.springboardfoundation.usersservice.mapper;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.factory.Mappers;
-import org.springboardfoundation.usersservice.dto.OtpDto;
+import org.springboardfoundation.common.dto.OtpDto;
 import org.springbordfoundation.db.entity.Otp;
 
 

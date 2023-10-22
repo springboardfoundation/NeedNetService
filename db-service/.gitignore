@@ -31,7 +31,7 @@ build/
 
 ### VS Code ###
 .vscode/
-/.apt_generated_test
+/.apt_generated_tests/
 
 # Compiled class file
 *.class
