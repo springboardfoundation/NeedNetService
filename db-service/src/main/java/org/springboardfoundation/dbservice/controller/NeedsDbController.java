@@ -1,9 +1,9 @@
-package org.springboardfoundation.dbservice.web.controller;
+package org.springboardfoundation.dbservice.controller;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springboardfoundation.common.web.BaseController;
-import org.springboardfoundation.dbservice.web.ApiConstants;
+import org.springboardfoundation.common.web.ApiConstants;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;

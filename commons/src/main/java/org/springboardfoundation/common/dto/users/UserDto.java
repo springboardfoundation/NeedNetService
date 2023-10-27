@@ -15,4 +15,5 @@ public class UserDto {
     private String occupation;
     private String mobileNumber;
     private String password;
+    private String userIdentifier;
 }

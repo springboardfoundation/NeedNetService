@@ -21,6 +21,7 @@
         <module>db-service</module>
         <module>file-service</module>
         <module>discovery-service</module>
+		<module>web-clients-lib</module>
     </modules>
 
     <properties>
@@ -92,6 +93,11 @@
             <groupId>net.skobow</groupId>
             <artifactId>apikey-authentication-spring-boot-starter</artifactId>
             <version>0.6.1</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-loadbalancer</artifactId>
+            <version>4.0.3</version>
         </dependency>
     </dependencies>
 

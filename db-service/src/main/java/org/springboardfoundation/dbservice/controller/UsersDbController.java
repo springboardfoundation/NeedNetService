@@ -1,4 +1,4 @@
-package org.springboardfoundation.dbservice.web.controller;
+package org.springboardfoundation.dbservice.controller;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -8,7 +8,7 @@ import org.springboardfoundation.dbservice.service.UserDbService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import static org.springboardfoundation.dbservice.web.ApiConstants.*;
+import static org.springboardfoundation.common.web.ApiConstants.*;
 
 /*
  * Ref: https://spring.io/guides/gs/uploading-files/
