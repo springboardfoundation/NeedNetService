@@ -35,8 +35,7 @@
         <spring-cloud.version>2022.0.4</spring-cloud.version>
         <spring.cloud.schema.version>2.2.1.RELEASE</spring.cloud.schema.version>
         <spring.commons.lib.version>2.12.0-SNAPSHOT</spring.commons.lib.version>
-        <!-- db -->
-        <mariadb.connector.version>3.0.8</mariadb.connector.version>
+
         <!-- others -->
         <lombok.version>1.18.24</lombok.version>
         <mapstruct.version>1.5.2.Final</mapstruct.version>
@@ -53,8 +52,9 @@
         </dependency>
         <dependency>
             <groupId>org.springboardfoundation</groupId>
-            <artifactId>db-lib</artifactId>
+            <artifactId>web-clients-lib</artifactId>
             <version>${project.version}</version>
+            <scope>compile</scope>
         </dependency>
         <!-- spring -->
         <dependency>
@@ -68,6 +68,10 @@
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -91,10 +95,6 @@
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-api</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.mariadb.jdbc</groupId>
-            <artifactId>mariadb-java-client</artifactId>
         </dependency>
         <dependency>
             <groupId>org.mapstruct</groupId>

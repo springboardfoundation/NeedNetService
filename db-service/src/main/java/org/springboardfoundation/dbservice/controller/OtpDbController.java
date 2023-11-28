@@ -31,8 +31,8 @@ public class OtpDbController extends BaseController {
     }
 
     @GetMapping("/status")
-    public ResponseEntity status() {
-        log.info("Health check received.");
+    public ResponseEntity<String> status() {
+        log.info("OtpDbController: Health check received.");
         return ResponseEntity.ok("success");
     }
 }

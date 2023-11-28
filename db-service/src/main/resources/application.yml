@@ -1,0 +1,63 @@
+server:
+  contextPath: /
+  port: 0
+  servlet:
+    context-path: /
+
+spring:
+  application:
+    name: db-service
+# Spring datasource
+  datasource:
+    driverClassName: org.mariadb.jdbc.Driver
+    jdbcUrl: jdbc:mariadb://localhost:3306/needs?createDatabaseIfNotExist=true
+    url: jdbc:mariadb://localhost:3306/needs?createDatabaseIfNotExist=true
+    username: root
+    password: root
+  jpa:
+    database-platform: org.hibernate.dialect.MariaDBDialect
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MariaDBDialect
+        format_sql: true
+    show-sql: true
+
+  devtools:
+    remote:
+      restart:
+        enabled: true
+  main:
+    allow-bean-definition-overriding: true
+
+# Log Levels
+#logging.level.org.springframework=DEBUG
+logging:
+  file: ${java.io.tmpdir}/users-service.log
+  level:
+    org:
+      springboardfounation: DEBUG
+# Log Patterns
+  pattern:
+    console: '%d{yyyy-MM-dd HH:mm:ss} - %msg%n'
+    file: '%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%'
+# Log Thresholds
+  threshold:
+    console: TRACE
+    file: INFO
+
+# Eureka related
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:9000/eureka
+
+# JWT Security Configuration
+application:
+  security:
+    jwt:
+      secret-key: 404E635266556A586E3272357538782F413F4428472B4B6250645367566B5970
+      expiration: 86400000
+      refresh-token:
+        expiration: 604800000
