@@ -22,39 +22,39 @@ public class UsersDbController extends BaseController {
 
     private final UserDbService userDbService;
 
-    @GetMapping(MOBILE_NUMBER_PARAM)
-    public ResponseEntity<UserDto> getUserByMobileNumber(@PathVariable(MOBILE_NUMBER_PARAM) String mobileNumber) {
+    @GetMapping(BY_MOBILE_NUMBER + "/" + MOBILE_NUMBER_PARAM)
+    public ResponseEntity<UserDto> getUserByMobileNumber(@PathVariable(MOBILE_NUMBER) String mobileNumber) {
         UserDto userDto = userDbService.getUserByMobileNumber(mobileNumber);
         return ResponseEntity.ok(userDto);
     }
 
-    @GetMapping(USERID_PARAM)
-    public ResponseEntity<UserDto> getUserByUserIdentifier(@PathVariable(USERID_PARAM) String userIdentifier) {
+    @GetMapping(BY_USERID + "/" + USERID_PARAM)
+    public ResponseEntity<UserDto> getUserByUserIdentifier(@PathVariable(USERID) String userIdentifier) {
         UserDto userDto = userDbService.getUserByIdentifier(userIdentifier);
         return ResponseEntity.ok(userDto);
     }
 
     @PostMapping(MOBILE_NUMBER_PARAM)
-    public ResponseEntity<UserDto> save(@RequestBody UserDto userDto, @PathVariable(MOBILE_NUMBER_PARAM) String mobileNumber) {
+    public ResponseEntity<UserDto> save(@RequestBody UserDto userDto, @PathVariable(MOBILE_NUMBER) String mobileNumber) {
         userDto = userDbService.saveUser(userDto, mobileNumber);
         return ResponseEntity.ok(userDto);
     }
 
     @PutMapping(MOBILE_NUMBER_PARAM)
-    public ResponseEntity<UserDto> update(@RequestBody UserDto userDto, @PathVariable(MOBILE_NUMBER_PARAM) String mobileNumber) {
+    public ResponseEntity<UserDto> update(@RequestBody UserDto userDto, @PathVariable(MOBILE_NUMBER) String mobileNumber) {
         userDto = userDbService.updateUser(userDto, mobileNumber);
         return ResponseEntity.ok(userDto);
     }
 
     @DeleteMapping(MOBILE_NUMBER_PARAM)
-    public ResponseEntity<UserDto> delete(@PathVariable(MOBILE_NUMBER_PARAM) String mobileNumber) {
+    public ResponseEntity<UserDto> delete(@PathVariable(MOBILE_NUMBER) String mobileNumber) {
         UserDto userDto = userDbService.deleteUser(mobileNumber);
         return ResponseEntity.ok(userDto);
     }
 
     @GetMapping("/status")
-    public ResponseEntity status() {
-        log.info("Health check received.");
+    public ResponseEntity<String> status() {
+        log.info("UsersDbController: Health check received.");
         return ResponseEntity.ok("success");
     }
 }

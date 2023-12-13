@@ -3,6 +3,8 @@ package org.springboardfoundation.client.user;
 import org.springboardfoundation.common.dto.users.UserDto;
 import org.springframework.web.client.RestTemplate;
 
+import static org.springboardfoundation.common.web.ApiConstants.*;
+
 public class UserWebServiceImpl implements UserWebService {
     private final RestTemplate restTemplate;
     private final String baseUrl;
@@ -19,7 +21,12 @@ public class UserWebServiceImpl implements UserWebService {
 
     @Override
     public UserDto getUser(String mobileNumber) {
-        return restTemplate.getForObject(baseUrl + "/" + mobileNumber, UserDto.class);
+        return restTemplate.getForObject(baseUrl + BY_MOBILE_NUMBER + "/" + MOBILE_NUMBER_PARAM, UserDto.class, mobileNumber);
+    }
+
+    @Override
+    public UserDto getUserById(String userId) {
+        return restTemplate.getForObject(baseUrl + BY_USERID + "/" + USERID_PARAM, UserDto.class, userId);
     }
 
     @Override

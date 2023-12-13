@@ -1,0 +1,39 @@
+server:
+  port: 0
+  contextPath: /
+  servlet:
+    context-path: /
+
+  # Eureka related
+spring:
+  application:
+    name: needs-service
+  devtools:
+    remote:
+      restart:
+        enabled: true
+  autoconfigure:
+    exclude:
+      - org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration
+
+# Eureka related
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:9000/eureka
+
+logging:
+  level:
+    org:
+      springboardfounation: DEBUG
+    #springframework=DEBUG
+  # Log Thresholds
+  threshold:
+    console: TRACE
+    file: INFO
+  # Log to File
+  file: "${java:io:tmpdir}/users-service:log"
+  # Log Patterns
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} - %msg%n"
+    file: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%"
